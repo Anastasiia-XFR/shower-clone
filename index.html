@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <style>
+
+    .shower {--slide-ratio: calc(16 / 9); } * {font-family: 'Roboto', Calibri, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; } .pic {display: block; margin: 20px auto; max-width: 100%; min-height: 200px; max-height: 40vmin; } .slide pre code {width: 100%; color: #4b86c2; } pre {display: block; margin: 0 auto; text-align: center; width: 100%; } li {margin-left: 30px; } .slide li::before {color: #cc0000; opacity: 1; } .num, .text {display: block; margin-left: 0; font-size: 95%; font-size: calc(10px + 1vmin); line-height: 1.2; } .num {font-weight: 700; color: #cc0000; } .text {margin-left: 40px; } </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>How to Clone a Website</h1>
+        <p>simple guide</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>How to <span style="color: #cc0000">Clone</span> a Website</h2>
+        <p> - simple guide - </p>
+        <figure>
+            <img class="cover" src="pictures/bg.jpg" alt="Hands on the orange typewriter in a park">
+            <figcaption class="copyright right white">
+                <a href="#">©XFR</a>
+            </figcaption>
+        </figure>
+        <style>
+            .cover {
+                height: 100%;
+            }
+
+            #cover h2 {
+                margin: 30px 0 0;
+                color: white;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: white;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p a {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Tools</h2>
+        <ol>
+            <li>Cyotek WebCopy <a href="https://www.cyotek.com/cyotek-webcopy">https://www.cyotek.com/cyotek-webcopy</a></li>
+            <li>HTTrack <a href="http://www.httrack.com/">http://www.httrack.com/</a></li>
+            <li>Scrap Book ext for FireFox</li>
+            <li>wget/curl</li>
+        </ol>
+        <p class="note">
+            <small>[1] wget --no-check-certificate --recursive --page-requisites --convert-links --html-extension</small> <br>
+            <small>[2] wget -r -l 3 -k -p -t 3 -nc</small>
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2>Example 1</h2>
+        <p>We want to clone this site <a href="https://bunnycdn.com/">https://bunnycdn.com/</a></p>
+        <h3 style="margin: 0;">STR</h3>
+        <p><span class="num">1.</span> <span class="text">Install <a href="https://www.cyotek.com/cyotek-webcopy">Cyotek WebCopy</a> -> (<a href="http://joxi.net/a2XVQX5Sw3gzxr">pic1</a>)</span></p>
+        <p><span class="num">2.</span> <span class="text">Open WebCopy, paste site URL and select directory, which you want save site (<a href="http://joxi.ru/DrlaV0JTVDxqBm">pic2</a>), pressed the button <b>Copy</b> and wait a minute</span></p>
+    </section>
+    <section class="slide">
+        <h2>STR</h2>
+        <p><span class="num">3.</span> <span class="text">Then pressed <b>Open Output Folder</b> (<a href="http://joxi.ru/8AnXVqghz4WvWm">pic3</a>) and convert all files with extension .htm to .html or remove .htm from filename: index.html -> index (<a href="http://joxi.ru/MAj0lq8hjDoyym">pic4</a>)</span></p>
+        <p><span class="num">4.</span> <span class="text">Inside all html files remove GTM/GA/ no needed scripts/css and WebCopier info (<a href="http://joxi.net/5mdkMqXC3g0o3r">pic5</a>)</span></p>
+
+    </section>
+    <section class="slide">
+        <h2>STR</h2>
+        <p><span class="num">5.</span> <span class="text">Use regexp, like: <b>href=".*?"</b> and remove no needed attributes or replace all tag <b>href</b> value (<a href="http://joxi.net/823OpoDS9Y3eG2">pic6</a>)  <pre><code>&lt;a href="some_url"&gt;LINK&lt;/a&gt;</code></pre></span>
+
+        </p>
+        <p>
+            <span class="num">6.</span> <span class="text">Insert your GTM/GA and LINK you needed. </span>
+        </p>
+    </section>
+    <section class="slide">
+     <small>PIC 1</small>
+     <img src="pictures/pic1.jpg" alt="" class="pic">
+ </section>
+ <section class="slide">
+   <small>PIC 2</small>
+   <img src="pictures/pic2.jpg" alt="" class="pic">
+</section>
+<section class="slide">
+   <small>PIC 3</small>
+   <img src="pictures/pic3.jpg" alt="" class="pic">
+</section>
+<section class="slide">
+   <small>PIC 4</small>
+   <img src="pictures/pic4.jpg" alt="" class="pic">
+</section>
+<section class="slide">
+   <small>PIC 5</small>
+   <img src="pictures/pic5.jpg" alt="" class="pic">
+</section>
+<section class="slide">
+   <small>PIC 6</small>
+   <img src="pictures/pic6.jpg" alt="" class="pic">
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/shower.js"></script>
+<!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
